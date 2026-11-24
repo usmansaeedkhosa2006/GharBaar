@@ -1,0 +1,29 @@
+{
+  "name": "gharbaar-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:init": "node --env-file=.env.local scripts/db-init.mjs",
+    "db:reset": "node --env-file=.env.local scripts/db-init.mjs --reset"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "jose": "5.9.6",
+    "lucide-react": "0.468.0",
+    "next": "15.5.29",
+    "pg": "8.13.1",
+    "react": "19.1.10",
+    "react-dom": "19.1.10"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "2.4.6",
+    "@types/node": "22.10.2",
+    "@types/pg": "8.11.10",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "typescript": "5.7.2"
+  }
+}

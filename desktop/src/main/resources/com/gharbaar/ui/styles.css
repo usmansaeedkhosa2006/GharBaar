@@ -1,0 +1,174 @@
+/* =====================================================================
+   GharBaar Desktop - JavaFX stylesheet
+   Palette taken from the reference UI design (white cards, blue accent)
+   ===================================================================== */
+
+/* ---------- [BASE] ---------- */
+.root {
+    -primary: #2f80ed;
+    -primary-dark: #1c6dd0;
+    -primary-soft: #eaf2fd;
+    -ink: #1f2937;
+    -muted: #6b7280;
+    -line: #e5e7eb;
+    -bg: #f4f6fa;
+    -fx-font-family: "Segoe UI", "Inter", "Helvetica Neue", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: -bg;
+    -fx-text-fill: -ink;
+}
+.label { -fx-text-fill: -ink; }
+.muted { -fx-text-fill: -muted; }
+.small { -fx-font-size: 11.5px; }
+.h1 { -fx-font-size: 26px; -fx-font-weight: bold; }
+.h2 { -fx-font-size: 19px; -fx-font-weight: bold; }
+.h3 { -fx-font-size: 15px; -fx-font-weight: bold; }
+.price { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: -ink; }
+.price-big { -fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: -primary; }
+.link { -fx-text-fill: -primary; -fx-cursor: hand; -fx-font-weight: 600; }
+.link:hover { -fx-underline: true; }
+.error-text { -fx-text-fill: #dc2626; }
+
+/* ---------- [CARDS] ---------- */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-border-color: -line;
+    -fx-border-radius: 18;
+    -fx-padding: 18;
+}
+.card-flat { -fx-background-color: white; -fx-background-radius: 16; -fx-padding: 14; }
+.property-card {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-border-color: -line;
+    -fx-border-radius: 18;
+    -fx-cursor: hand;
+}
+.property-card:hover { -fx-border-color: -primary; -fx-effect: dropshadow(gaussian, rgba(47,128,237,0.18), 18, 0, 0, 4); }
+.stat-card { -fx-background-color: white; -fx-background-radius: 18; -fx-border-color: -line; -fx-border-radius: 18; -fx-padding: 18; }
+.stat-value { -fx-font-size: 28px; -fx-font-weight: bold; }
+
+/* ---------- [BUTTONS] ---------- */
+.button {
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-padding: 9 18;
+    -fx-cursor: hand;
+    -fx-font-weight: 600;
+}
+.btn-primary { -fx-background-color: -primary; -fx-text-fill: white; }
+.btn-primary:hover { -fx-background-color: -primary-dark; }
+.btn-outline { -fx-background-color: white; -fx-border-color: -primary; -fx-text-fill: -primary; }
+.btn-outline:hover { -fx-background-color: -primary-soft; }
+.btn-ghost { -fx-background-color: transparent; -fx-text-fill: -ink; }
+.btn-ghost:hover { -fx-background-color: #eef1f6; }
+.btn-danger { -fx-background-color: #fee2e2; -fx-text-fill: #b91c1c; }
+.btn-danger:hover { -fx-background-color: #fecaca; }
+.btn-success { -fx-background-color: #16a34a; -fx-text-fill: white; }
+.btn-success:hover { -fx-background-color: #15803d; }
+.icon-btn { -fx-background-color: -primary-soft; -fx-background-radius: 12; -fx-padding: 9; -fx-cursor: hand; }
+.icon-btn:hover { -fx-background-color: #d7e7fb; }
+
+/* ---------- [SQUIRCLE FILTER CHIPS] (rounded, as requested) ---------- */
+.chip {
+    -fx-background-color: white;
+    -fx-border-color: -line;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-padding: 7 14;
+    -fx-text-fill: -ink;
+    -fx-font-weight: normal;
+    -fx-cursor: hand;
+}
+.chip:hover { -fx-border-color: -primary; }
+.chip:selected {
+    -fx-background-color: -primary-soft;
+    -fx-border-color: -primary;
+    -fx-text-fill: -primary;
+    -fx-font-weight: 600;
+}
+.chip-square { -fx-min-width: 46; -fx-alignment: center; }
+
+/* ---------- [INPUTS] ---------- */
+.text-field, .password-field, .text-area, .combo-box, .date-picker, .spinner {
+    -fx-background-color: white;
+    -fx-border-color: -line;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+}
+.text-field, .password-field { -fx-padding: 10 12; }
+.text-field:focused, .password-field:focused, .text-area:focused { -fx-border-color: -primary; }
+.text-area .content { -fx-background-color: white; -fx-background-radius: 12; }
+.search-field { -fx-background-color: #f3f5f9; -fx-border-color: transparent; -fx-padding: 12 14; -fx-font-size: 14px; }
+.field-label { -fx-font-weight: 600; -fx-text-fill: -ink; }
+.check-box .box { -fx-background-radius: 5; -fx-border-radius: 5; }
+.check-box:selected .box { -fx-background-color: -primary; }
+.check-box:selected .mark { -fx-background-color: white; }
+
+/* ---------- [SIDEBAR / TOP BAR] ---------- */
+.sidebar { -fx-background-color: white; -fx-border-color: -line; -fx-border-width: 0 1 0 0; -fx-padding: 22 14; }
+.brand { -fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: -primary; }
+.nav-item {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-padding: 10 14;
+    -fx-alignment: center-left;
+    -fx-text-fill: -muted;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+}
+.nav-item:hover { -fx-background-color: #f1f5fb; }
+.nav-item.active { -fx-background-color: -primary-soft; -fx-text-fill: -primary; }
+.topbar { -fx-background-color: white; -fx-border-color: -line; -fx-border-width: 0 0 1 0; -fx-padding: 12 26; }
+.avatar { -fx-background-color: -primary; -fx-background-radius: 20; -fx-text-fill: white; -fx-font-weight: bold; -fx-alignment: center; }
+.badge-count { -fx-background-color: #ef4444; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 0 5; -fx-font-size: 10px; -fx-font-weight: bold; }
+
+/* ---------- [STATUS BADGES] ---------- */
+.badge { -fx-background-radius: 10; -fx-padding: 3 10; -fx-font-size: 11px; -fx-font-weight: bold; }
+.badge-green { -fx-background-color: #dcfce7; -fx-text-fill: #15803d; }
+.badge-amber { -fx-background-color: #fef3c7; -fx-text-fill: #b45309; }
+.badge-red { -fx-background-color: #fee2e2; -fx-text-fill: #b91c1c; }
+.badge-blue { -fx-background-color: -primary-soft; -fx-text-fill: -primary; }
+.badge-gray { -fx-background-color: #f3f4f6; -fx-text-fill: #4b5563; }
+
+/* ---------- [AMENITY GRID] ---------- */
+.amenity { -fx-padding: 6 0; -fx-spacing: 10; -fx-alignment: center-left; }
+.amenity-icon { -fx-background-color: #eefbf3; -fx-background-radius: 10; -fx-padding: 7; }
+
+/* ---------- [HERO + LOGIN] ---------- */
+.hero { -fx-background-color: linear-gradient(to bottom right, #e9f1fc, #f7f9fc); -fx-background-radius: 22; -fx-padding: 26 30; }
+.login-left { -fx-background-color: linear-gradient(to bottom right, #2f80ed, #1c5fbf); }
+.login-title { -fx-font-size: 34px; -fx-font-weight: bold; -fx-text-fill: white; }
+.login-sub { -fx-font-size: 15px; -fx-text-fill: #dbe8fb; }
+.role-card {
+    -fx-background-color: white;
+    -fx-border-color: -line;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-padding: 14;
+    -fx-cursor: hand;
+}
+.role-card:selected { -fx-background-color: -primary-soft; -fx-border-color: -primary; -fx-border-width: 2; }
+.tab-switch { -fx-background-color: #eef1f6; -fx-background-radius: 14; -fx-padding: 4; }
+.tab-btn { -fx-background-color: transparent; -fx-background-radius: 11; -fx-padding: 8 22; -fx-text-fill: -muted; -fx-font-weight: 600; -fx-cursor: hand; }
+.tab-btn:selected { -fx-background-color: white; -fx-text-fill: -ink; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 1); }
+
+/* ---------- [TABLES / LISTS / SCROLL] ---------- */
+.scroll-pane, .scroll-pane > .viewport { -fx-background-color: transparent; -fx-background: transparent; }
+.scroll-pane { -fx-padding: 0; }
+.table-view { -fx-background-color: white; -fx-background-radius: 14; -fx-border-color: -line; -fx-border-radius: 14; }
+.table-view .column-header-background { -fx-background-color: #f8fafc; -fx-background-radius: 14 14 0 0; }
+.table-view .column-header { -fx-background-color: transparent; -fx-padding: 6; }
+.table-row-cell:selected { -fx-background-color: -primary-soft; }
+.table-row-cell:selected .text { -fx-fill: -ink; }
+.separator .line { -fx-border-color: -line; }
+.dialog-pane { -fx-background-color: white; }
+.dialog-pane > .button-bar > .container { -fx-padding: 0 4 8 4; }
+.dialog-pane .header-panel { -fx-background-color: white; }
+.thumb { -fx-cursor: hand; -fx-opacity: 0.75; }
+.thumb:hover { -fx-opacity: 1; }
+.map-card { -fx-background-color: linear-gradient(to bottom right, #e6f0e4, #dbeaf7); -fx-background-radius: 16; }
+.slider .track { -fx-background-color: #dbe6f7; -fx-background-radius: 4; }
+.slider .thumb { -fx-background-color: white; -fx-border-color: -primary; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10; }
+.toast { -fx-background-color: #111827; -fx-background-radius: 12; -fx-padding: 12 18; -fx-text-fill: white; }

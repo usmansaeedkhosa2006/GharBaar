@@ -1,0 +1,5 @@
+# Copy to db.properties and fill in your Postgres (Neon) details
+db.url=jdbc:postgresql://<host>/<database>?sslmode=require
+db.user=<user>
+db.password=<password>
+
